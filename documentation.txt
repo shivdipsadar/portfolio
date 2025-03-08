@@ -1,0 +1,88 @@
+Portfolio Website Documentation
+=============================
+
+Overview
+--------
+A modern, responsive portfolio website built with HTML, CSS, and JavaScript. The website features a clean design with dark/light theme support, smooth animations, and interactive elements.
+
+Features
+--------
+1. Responsive Design
+   - Mobile-first approach
+   - Adapts to all screen sizes
+   - Flexible grid layouts
+
+2. Dark/Light Theme
+   - Toggle between dark and light modes
+   - Persistent theme preference using localStorage
+   - Smooth transition effects
+
+3. Interactive Elements
+   - Animated text typing effect
+   - Smooth scroll navigation
+   - AOS (Animate On Scroll) animations
+   - GSAP animations for enhanced user experience
+   - Contact form with validation
+
+Technologies Used
+---------------
+- HTML5
+- CSS3
+- JavaScript (ES6+)
+- Libraries:
+  * AOS (Animate On Scroll)
+  * GSAP (GreenSock Animation Platform)
+  * Typed.js
+  * Font Awesome Icons
+
+Project Structure
+---------------
+/portfolio
+├── index.html          # Main HTML file
+├── css/
+│   └── style.css       # Main stylesheet
+├── js/
+│   └── main.js         # JavaScript functionality
+└── images/             # Image assets
+
+Setup and Installation
+--------------------
+1. Clone the repository
+2. No build process required
+3. Open index.html in a modern web browser
+
+Browser Compatibility
+-------------------
+- Chrome (latest)
+- Firefox (latest)
+- Safari (latest)
+- Edge (latest)
+
+Features Implementation
+---------------------
+1. Theme Switching:
+   - Uses CSS variables for consistent theming
+   - JavaScript localStorage for theme persistence
+
+2. Animations:
+   - Entry animations using GSAP
+   - Scroll animations using AOS
+   - Typing effect using Typed.js
+
+3. Navigation:
+   - Smooth scroll to sections
+   - Scroll to top button
+   - Fixed navigation bar
+
+Maintenance
+----------
+- Update project screenshots as needed
+- Keep dependencies updated
+- Test across different browsers regularly
+
+Future Enhancements
+-----------------
+- Add more project examples
+- Implement form submission backend
+- Add blog section
+- Add portfolio filtering options
