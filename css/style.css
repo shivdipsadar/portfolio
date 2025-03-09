@@ -5,7 +5,21 @@
     --text-primary: #ffffff;
     --text-secondary: #a8b2d1;
 }
+.mobile-menu {
+    display: none;
+    background: none;
+    border: none;
+    color: var(--text-primary);
+    font-size: 1.5rem;
+    cursor: pointer;
+    z-index: 1000;
+}
 
+@media (max-width: 768px) {
+    .mobile-menu {
+        display: block;
+    }
+}
 * {
     margin: 0;
     padding: 0;
@@ -15,21 +29,17 @@
 html {
     scroll-behavior: smooth;
 }
-
-body {
-    font-family: 'Inter', sans-serif;
-    background-color: var(--bg-primary);
-    color: var(--text-primary);
-    line-height: 1.6;
+.project-image iframe {
+    width: 100%;
+    height: 300px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
-
 .container {
     max-width: 1200px;
     margin: 0 auto;
     padding: 0 2rem;
 }
-
-/* Navigation */
 .nav-container {
     position: fixed;
     width: 100%;
@@ -42,35 +52,29 @@ body {
     justify-content: space-between;
     align-items: center;
 }
-
 .logo {
     font-size: 1.5rem;
     font-weight: bold;
     color: var(--accent-color);
 }
-
 .nav-links {
     display: flex;
     list-style: none;
     gap: 2rem;
 }
-
 .nav-links a {
     color: var(--text-primary);
     text-decoration: none;
     transition: color 0.3s;
 }
-
 .nav-links a:hover {
     color: var(--accent-color);
 }
-
 /* Sections */
 section {
     min-height: 100vh;
     padding: 100px 0;
 }
-
 /* Home Section */
 .home-section {
     display: flex;
@@ -78,27 +82,22 @@ section {
     background: linear-gradient(rgba(18, 18, 18, 0.9), rgba(18, 18, 18, 0.9)),
                 url('../images/background.jpg') center/cover;
 }
-
 .main-title {
     font-size: 4rem;
     margin-bottom: 1rem;
 }
-
 .highlight {
     color: var(--accent-color);
 }
-
 .typed-text {
     font-size: 1.5rem;
     margin-bottom: 2rem;
 }
-
 .cta-buttons {
     display: flex;
     gap: 1rem;
     margin-top: 2rem;
 }
-
 /* About Section */
 .skills-list {
     display: flex;
@@ -111,7 +110,6 @@ section {
     background: linear-gradient(rgba(18, 18, 18, 0.9), rgba(18, 18, 18, 0.9)),
                 url('../images/background.jpg') center/cover;
 }
-
 .skills-list li {
     background: rgba(30, 30, 30, 0.8);
     backdrop-filter: blur(10px);
@@ -139,26 +137,22 @@ section {
     background: linear-gradient(rgba(18, 18, 18, 0.9), rgba(18, 18, 18, 0.9)),
                 url('../images/background.jpg') center/cover;
 }
-
 #contact-form input,
 #contact-form textarea {
     background: rgba(30, 30, 30, 0.8);
     backdrop-filter: blur(10px);
     border: 1px solid rgba(100, 255, 218, 0.1);
 }
-
 #contact-form input:focus,
 #contact-form textarea:focus {
     border-color: var(--accent-color);
 }
-
 /* Section Headers */
 section h2 {
     color: var(--accent-color);
     margin-bottom: 2rem;
     text-align: center;
 }
-
 section h3 {
     color: var(--text-primary);
     margin: 1.5rem 0 1rem;
@@ -170,21 +164,17 @@ section h3 {
     transition: transform 0.3s;
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
 }
-
 .project-card:hover {
     transform: translateY(-10px);
 }
-
 .project-image img {
     width: 100%;
     height: 200px;
     object-fit: cover;
 }
-
 .project-info {
     padding: 1.5rem;
 }
-
 /* Contact Form Styles */
 .contact-content {
     display: flex;
@@ -194,14 +184,12 @@ section h3 {
     max-width: 600px;
     margin: 0 auto;
 }
-
 #contact-form {
     display: flex;
     flex-direction: column;
     gap: 1.5rem;
     width: 100%;
 }
-
 #contact-form input,
 #contact-form textarea {
     width: 100%;
@@ -212,24 +200,20 @@ section h3 {
     color: var(--text-primary);
     font-size: 1rem;
 }
-
 #contact-form textarea {
     resize: none;
     height: 150px;
 }
-
 #contact-form input:focus,
 #contact-form textarea:focus {
     outline: none;
     border-color: var(--accent-color);
 }
-
 .social-links {
     display: flex;
     gap: 2rem;
     margin-top: 1rem;
 }
-
 .social-links a {
     font-size: 1.8rem;
 }
@@ -298,15 +282,12 @@ input, textarea {
     justify-content: space-between;
     gap: 2rem;
 }
-
 .profile-content {
     flex: 1;
 }
-
 .profile-image {
     flex-shrink: 0;
 }
-
 .profile-image img {
     width: 300px;
     height: 300px;
@@ -407,4 +388,96 @@ input, textarea {
 }
 .social-links a:hover {
     color: var(--accent-color);
+}
+/* Add these media queries at the end of your CSS file */
+
+@media (max-width: 768px) {
+    /* Navigation */
+    .nav-container {
+        padding: 1rem;
+    }
+
+    .nav-links {
+        position: fixed;
+        top: 0;
+        right: -100%;
+        height: 100vh;
+        width: 70%;
+        background: var(--bg-secondary);
+        flex-direction: column;
+        justify-content: center;
+        transition: 0.3s;
+    }
+
+    .nav-links.active {
+        right: 0;
+    }
+
+    /* Home Section */
+    .home-content {
+        flex-direction: column-reverse;
+        text-align: center;
+        padding-top: 2rem;
+    }
+
+    .main-title {
+        font-size: 2.5rem;
+    }
+
+    .profile-image img {
+        width: 200px;
+        height: 200px;
+        margin-bottom: 2rem;
+    }
+
+    .cta-buttons {
+        justify-content: center;
+    }
+
+    /* About Section */
+    .about-content {
+        padding: 1rem;
+    }
+
+    .skills-list {
+        justify-content: center;
+    }
+
+    /* Project Section */
+    .project-card {
+        margin: 1rem;
+    }
+
+    .project-info {
+        padding: 1rem;
+    }
+
+    /* Contact Section */
+    .contact-content {
+        padding: 1rem;
+    }
+
+    #contact-form {
+        width: 100%;
+    }
+}
+
+@media (max-width: 480px) {
+    .main-title {
+        font-size: 2rem;
+    }
+
+    .typed-text {
+        font-size: 1.2rem;
+    }
+
+    .cta-buttons {
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    .btn {
+        width: 100%;
+        text-align: center;
+    }
 }
