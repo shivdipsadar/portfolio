@@ -88,3 +88,22 @@ function loadTheme() {
 // Event listeners
 themeToggle.addEventListener('click', toggleTheme);
 document.addEventListener('DOMContentLoaded', loadTheme);
+
+// Mobile menu functionality
+const mobileMenu = document.getElementById('mobile-menu');
+const navLinks = document.querySelector('.nav-links');
+
+mobileMenu.addEventListener('click', () => {
+    navLinks.classList.toggle('active');
+    mobileMenu.querySelector('i').classList.toggle('fa-bars');
+    mobileMenu.querySelector('i').classList.toggle('fa-times');
+});
+
+// Close menu when clicking a link
+document.querySelectorAll('.nav-links a').forEach(link => {
+    link.addEventListener('click', () => {
+        navLinks.classList.remove('active');
+        mobileMenu.querySelector('i').classList.add('fa-bars');
+        mobileMenu.querySelector('i').classList.remove('fa-times');
+    });
+});
