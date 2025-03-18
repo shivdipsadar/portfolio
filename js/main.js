@@ -46,20 +46,6 @@ gsap.from('.intro-text', {
     delay: 0.5
 });
 
-// Form submission
-const contactForm = document.getElementById('contact-form');
-contactForm.addEventListener('submit', (e) => {
-    e.preventDefault();
-    // Add your form submission logic here
-    const formData = new FormData(contactForm);
-    const name = formData.get('name');
-    const email = formData.get('email');
-    const message = formData.get('message');
-    
-    // You can implement your email sending logic here
-    console.log('Form submitted:', { name, email, message });
-    contactForm.reset();
-});
 
 // Theme toggle functionality
 const themeToggle = document.getElementById('theme-toggle');
